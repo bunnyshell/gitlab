@@ -1,5 +1,5 @@
 exec_once:
- files:
+ execs:
   Install Gitlab:
    name: Install Gitlab
    command: |
