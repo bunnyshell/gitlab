@@ -5,6 +5,7 @@ exec_once:
    command: |
      #!/usr/bin/env bash
      sudo apt-get install -y curl openssh-server ca-certificates
-     sudo apt-get install -y postfix
+     DEBIAN_FRONTEND=noninteractive apt-get install -y postfix
      curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
      sudo EXTERNAL_URL="http://gitlab.example.com" apt-get install -y gitlab-ee
+     sudo gitlab-ctl reconfigure
