@@ -2,6 +2,7 @@ exec_once:
  execs:
   Install Gitlab:
    name: Install Gitlab
+   timeout: "2000"
    command: |
      #!/usr/bin/env bash
      sudo apt-get install -y curl openssh-server ca-certificates
